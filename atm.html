@@ -1,21 +1,18 @@
 <script>
+  let account=3000000;
+  let PIN=1100;
   alert ("Welcome to BG Bank\n\nClick Ok To Continue");
   prompt (`Please Enter Your Pin`);
   
-  let transaction=prompt(`MAIN MENU
+  let transaction=+prompt(`MAIN MENU
 
-  1.Balance Inquiry
-
-  2.Cash Withdraw
-
-  3.Quick Airtime
-
-  4.PIN Change
-
+  1.Balance Inquiry                2.Cash Withdraw               
+  3.Quick Airtime                  4. PIN Change
   5.Transfer Cash`);
 
+  
   if(transaction=="1") {
-    prompt(`Please Select Bank Type
+    prompt(`Please Select Account Type
 
     1.Savings
 
@@ -24,17 +21,22 @@
   }
 
   else if(transaction=="2"){
-    prompt(`Please Choose How Much To Withdraw
+   let option= +prompt(`Please Choose How Much To Withdraw
 
-    1.N1000 
+    1.N1000                  2.N5000
 
-    2.N5000 
+    3.N10,000                4.N50,000
+    
+    5.Other amount`);
 
-    3.N10,000 
-
-    4.N50,000`);
-    alert(`Please Take Your Cash`)
-  }
+    if (option=="5") {
+      prompt(`please input preferred amount`);
+      alert(`Transaction Successful.Please Take Your Cash.`)
+    }
+    else {
+    alert(`Transaction Successful.Please Take Your Cash`)}
+       
+    }
 
   else if(transaction=="3"){
     prompt(`Please Enter Recipient Number`);
